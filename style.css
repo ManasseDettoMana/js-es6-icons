@@ -1,0 +1,23 @@
+header h1{
+    color: rgb(11, 150, 214);
+}
+#navigazione{
+    background-color: rgb(68, 180, 231);
+}
+
+#titolo,
+#navigazione{
+    height: 75px;
+}
+
+nav h2,
+nav select{
+    height: 25px;
+}
+
+.box{
+    width: 250px;
+    height: 125px;
+    border-radius: 10px;
+}
+
