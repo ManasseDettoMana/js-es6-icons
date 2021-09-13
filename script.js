@@ -110,19 +110,51 @@ const vettoreIcone = [
 ];
 
 let box_container = document.getElementById('box_container');
-// let {name,prefix,type,family} = vettoreIcone;
 
-vettoreIcone.forEach((element)=>{
-	// console.log(element.name);
+const types = getTypes(vettoreIcone,"type");
+const selezione = document.getElementById("selezione");
 
-	box_container.innerHTML += 
- 	`
-	<div class="box mb-5 me-4 d-flex flex-column justify-content-center align-items-center">
-		<i class="${element.family} ${element.prefix}${element.name} icons_size "></i>
-		<div class="mt-2">
-			<h3>${element.name}</h3>
-		</div>
- 	</div>
- 	`;
-});
+addOptions(types,selezione);
+
+
+
+// vettoreIcone.forEach((element)=>{
+// 	let {name,prefix,type,family} = element;
+
+// 	box_container.innerHTML += 
+//  	`
+// 	<div class="box mb-5 me-4 d-flex flex-column justify-content-center align-items-center">
+// 		<i class="${family} ${prefix}${name} icons_size "></i>
+// 		<div class="mt-2">
+// 			<h3>${name}</h3>
+// 		</div>
+//  	</div>
+//  	`;
+// });
+
+
+function getTypes(array, proprieta){
+
+	const types = [];
+
+	array.forEach((element) => {
+		if(!types.includes(element[proprieta])){
+			types.push(element[proprieta]);
+		}
+	});
+	return types;
+}
+
+function addOptions(options,select){
+	options.forEach((element)=>{
+		select.innerHTML += `<option value="${element}">${element}</option>`;
+	});
+
+}
+
+
+
+// selezione.addEventListener('change', function(){
+	
+// });
 
