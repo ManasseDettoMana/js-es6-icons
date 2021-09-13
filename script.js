@@ -109,4 +109,20 @@ const vettoreIcone = [
 	}
 ];
 
+let box_container = document.getElementById('box_container');
+// let {name,prefix,type,family} = vettoreIcone;
+
+vettoreIcone.forEach((element)=>{
+	// console.log(element.name);
+
+	box_container.innerHTML += 
+ 	`
+	<div class="box mb-5 me-4 d-flex flex-column justify-content-center align-items-center">
+		<i class="${element.family} ${element.prefix}${element.name} icons_size "></i>
+		<div class="mt-2">
+			<h3>${element.name}</h3>
+		</div>
+ 	</div>
+ 	`;
+});
 

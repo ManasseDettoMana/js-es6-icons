@@ -10,6 +10,10 @@ header h1{
     height: 75px;
 }
 
+nav h2{
+    color: white;
+}
+
 nav h2,
 nav select{
     height: 25px;
@@ -19,5 +23,10 @@ nav select{
     width: 250px;
     height: 125px;
     border-radius: 10px;
+    background-color: red;
+}
+
+.icons_size{
+   transform: scale(2.5);
 }
 
